@@ -7,3 +7,159 @@
     font-family: "Fredoka", sans-serif;
 }
 
+
+
+
+
+/* SECTION BLOG */
+
+.section-blog{
+    height: 500px;
+    background-color: aliceblue;
+}
+
+
+
+
+/* FOOTER */
+
+.footer-conteiner{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    
+}
+.footer-item-1{
+    
+    background-color: #f7f7f7;
+    height: 140px;
+    
+}
+.footer-item-1 img{
+    padding-top: 25px;
+    width: 60px;
+    height: auto;
+    animation-name: moveravion;
+    animation-duration: 7s;
+    animation-iteration-count: infinite;
+    animation-direction: normal;
+    animation-timing-function: ease-in-out;
+}
+
+@keyframes moveravion{
+    0%{
+        transform: translateX(0%);
+    }
+    100%{
+        transform: translateX(2400%);
+    }
+    
+}
+
+.footer-item-2{
+    background-color: white;
+    height: 75px;
+    width: 80%;
+    position: absolute;
+    top: 20%;
+    left: 10%;
+    padding: 10px 10px 10px 10px;
+    display: flex;
+    justify-content: space-around;
+    box-shadow: 0px 1px 10px rgba(0,0,0,0.2);
+    overflow: hidden;
+    /* transition: all 400ms ease-out;*/
+	cursor: default; 
+    /* border-radius: 5px; */
+}
+.footer-item-2:hover{
+    box-shadow: 5px 5px 10px rgba(0,0,0,0.4);
+    transform: translateY(-3%);
+   
+}
+
+.footer-item-2-contact-1{
+    display: flex;
+    align-items: center;
+}
+.footer-item-2-contact-1 p{
+    color: #c9a662;
+}
+
+.footer-item-2-contact-2{
+    display: flex;
+    align-items: center;
+}
+.footer-item-2-contact-2 p{
+    color: gray;
+}
+
+.footer-item-2-rectangulo{
+    width: 30px;
+    height: 50px;
+    margin-right: 10px;
+    border-width: 5px;
+    border-style: solid;
+    border-width: 3px;
+    border-color: #c9a762d7;
+}
+.footer-item-3{
+    background-color: #c9a662;
+    height: 300px;
+    display: flex;
+    justify-content: space-around;
+    padding-top: 60px;
+}
+.footer-item-3-contenid-1 {
+    color: white;
+
+}
+ .footer-item-3-contenid-1 h1{
+    padding-bottom: 15px;
+}
+.footer-item-3-contenid-1 p{
+    margin-top: 8px;
+}
+
+.footer-item-3-contenid-2 h1{
+    padding-bottom: 15px;
+}
+.footer-item-3-contenid-2 p{
+    color: white;
+    margin-top: 8px;
+
+}
+
+.footer-item-3-grilla-img {
+    display: grid;
+    grid-template-columns: 30% 30% 30%;
+    justify-content: space-around;
+    padding: 10px;
+    
+}
+.footer-item-3-grilla-img img{
+    width: 60px;
+    height: 60px;
+    margin-bottom: 10px;
+    
+}
+
+.footer-item-3-author{
+    background-color: #c9a662;
+    height: 40px;
+    width: auto;
+}
+.footer-item-3-author-linea{
+    height: 1px;
+    margin-left: 60px;
+    margin-right: 60px;
+    background-color: white;
+}
+.footer-item-3-author-p{
+    font-weight: bold;
+    display: flex;
+    justify-content: space-around;
+    justify-items: center;
+    padding-top: 10px;
+    padding-left: 50px;
+}
