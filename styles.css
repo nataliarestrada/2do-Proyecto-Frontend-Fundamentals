@@ -7,17 +7,195 @@
     font-family: "Fredoka", sans-serif;
 }
 
+/* body{
+    margin: 0px 40px;
+    background-color: #c9a662;
+} */
 
+/* SECTION EXOTIC PLACES */
+.section-exotic-places{
+    height: 1000px;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 30px;
+}
+.section-exotic-places p{
+    color: gray;
+    font-size: 14px;
+}
+.section-exotic-places h1{
+    font-size: 40px;
+}
+.section-exotic-places-conteiner-cards{
+    display: grid;
+    grid-template-columns: 30% 30% 30%;
+    grid-template-rows: 50% 50%;
+    justify-content: space-around;
+    width: 90%;
+    height: 80%;
+    padding-top: 90px;
+    padding-bottom: 30px;
+}
 
+.section-exotic-places-card{
+    width: 100%;
+    height: 100vh;
+}
+.section-exotic-places-card figure{
+    position:relative;
+    height: 250px;
+    cursor: pointer;
+    width: 350px;
+    overflow: hidden;
+    box-shadow: 0px 10px 15px rgba(0,0,0,0.50);
+}
+.section-exotic-places-card figure img{
+    width: 100%;
+    height: 100%;
+    transition: all 400ms ease-out;
+    will-change: transform;
+}
+.section-exotic-places-card figure .capa{
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(48, 47, 47, 0.5);
+    transition: all 400ms ease-out;
+    opacity: 0;
+    visibility: hidden;
+    text-align: center;
+}
+.section-exotic-places-card figure:hover > .capa {
+    opacity: 1;
+    visibility: visible;
+}
+.section-exotic-places-card figure:hover > .capa h3{
+    margin-top: 70px;
+    margin-bottom: 15px;
+}
+.section-exotic-places-card figure:hover > img{
+    transform: scale(1.3);
+}
+.section-exotic-places-card figure .capa h3{
+    color: #fff;
+    font-weight: 400;
+    margin-bottom: 120px;
+    transition: all 400ms ease-out;
+    margin-top: 30px;
+}
+.section-exotic-places-card figure .capa p{
+    color: #fff;
+    font-size: 15px;
+    line-height: 1.5;
+    width: 100%;
+    max-width: 220px;
+    margin: auto;
+}
+.section-exotic-places-buttom{
+    width: 150px;
+    height: 40px;
+    padding: 10px;
+    margin-top: 10px;
+    background-color: #c9a662;
+    color: white;
+    text-align: center;
+    font-weight: bold;
+    text-decoration: none;
+    transition: all 400ms ease;
+}
+.section-exotic-places-buttom:hover{
+    box-shadow: 5px 5px 10px rgba(0,0,0,0.4);
+    transform: translateY(-3%);
+}
+
+/* SECTION 50% */
+.section-50-desc{
+    height: 300px;
+    background-color: aliceblue;
+    display: flex;
+    align-items: center;
+
+}
+.section-50-desc img{
+    height: 300px;
+}
+.section-50-desc-detall p{
+    color: gray;
+    font-size: 14px;
+}
+.section-50-desc-detall h1{
+    font-size: 40px;
+}
 
 
 /* SECTION BLOG */
 
 .section-blog{
-    height: 500px;
-    background-color: aliceblue;
+    height: 600px;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 100px;
 }
-
+.section-blog p{
+    color: gray;
+    font-size: 14px;
+}
+.section-blog h1{
+    font-size: 40px;
+}
+.section-blog-conteiner-cards{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 80%;
+    height: 70%;
+    
+}
+.section-blog-card {
+    background-color: transparent;
+    width: 300px;
+    height: 200px;
+    perspective: 1000px; 
+}
+.section-blog-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+}
+.section-blog-card:hover .section-blog-card-inner {
+    transform: rotateY(180deg);
+}
+.section-blog-card-front, .section-blog-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden; /* Safari */
+    backface-visibility: hidden;
+}
+.section-blog-card-front {
+    background-color: #bbb;
+    color: black;
+}
+.section-blog-card-back {
+    padding: 10px;
+    width:300px;
+    height:300px;
+    background-color: #c9a662;
+    color: white;
+    transform: rotateY(180deg);
+}
+.section-blog-card-back p{
+    padding-top: 5px;
+    color: white;
+}
 
 
 
@@ -36,7 +214,7 @@
     
 }
 .footer-item-1 img{
-    padding-top: 25px;
+    padding-top: 20px;
     width: 60px;
     height: auto;
     animation-name: moveravion;
@@ -105,10 +283,10 @@
 }
 .footer-item-3{
     background-color: #c9a662;
-    height: 300px;
+    height: 350px;
     display: flex;
     justify-content: space-around;
-    padding-top: 60px;
+    padding-top: 70px;
 }
 .footer-item-3-contenid-1 {
     color: white;
