@@ -7,9 +7,9 @@
 }
 
 *{
-    box-sizing: border-box; 
+    /* box-sizing: border-box; 
     margin: 0;
-    padding: 0;
+    padding: 0; */
     font-family: "Fredoka", sans-serif;
 }
 
@@ -355,21 +355,53 @@
 }
 
 /*++++++++++++++++++ Responsivo +++++++++++++++++++++++++*/
-@media (max-width: 522px) {
-
+@media (max-width: 1250px){
     .section-exotic-places{
         display: flexbox;
         justify-content: center;
+        align-content: center;
         height: auto;
+        padding-bottom: 30px;
         /* padding-left: 140px; */
     }
 
     .section-exotic-places-conteiner-cards{
+        display: grid;
+        grid-template-columns: 40% 40%;
+        grid-template-rows: 33% 33% 33%;
+        justify-content: space-around;
+        width: 90%;
+        height: 80%;
+        
+    }
+
+    .section-exotic-places-card{
+        margin: 0;
+        padding: 20px;
+        height: auto;
+    }
+    @keyframes moveravion{
+        0%{
+            transform: translateX(0%);
+        }
+        100%{
+            transform: translateX(1300%);
+        }
+        
+    }
+}
+@media (max-width: 825px){
+    .section-exotic-places{
+        display: flexbox;
+        justify-content: center;
+        height: auto;
+    }
+
+    .section-exotic-places-conteiner-cards{
         display: flex;
-        /* flex-direction: column; */
         flex-wrap: wrap;
         margin-top: 30px;
-        margin-left: 90px;
+        margin-left: 300px;
         padding: 0;
         
     }
@@ -378,10 +410,51 @@
         padding: 20px;
         height: auto;
     }
+    @keyframes moveravion{
+        0%{
+            transform: translateX(0%);
+        }
+        100%{
+            transform: translateX(1000%);
+        }
+        
+    }
+}
+@media (max-width: 650px){
+    .section-exotic-places{
+        display: flexbox;
+        justify-content: center;
+        height: auto;
+    }
+
+    .section-exotic-places-conteiner-cards{
+        display: flex;
+        flex-wrap: wrap;
+        margin-top: 30px;
+        margin-left: 200px;
+        padding: 0;
+        
+    }
+    .section-exotic-places-card{
+        margin: 0;
+        padding: 20px;
+        height: auto;
+    }
+    @keyframes moveravion{
+        0%{
+            transform: translateX(0%);
+        }
+        100%{
+            transform: translateX(800%);
+        }
+        
+    }
+}
+
+@media (max-width: 1000px) {
+
 
     .section-50-desc{
-        margin-top: 40px;
-        /* margin-left: 0px; */
         display: flex;
         flex-wrap: wrap;
         flex-direction: column-reverse;
@@ -397,9 +470,12 @@
         padding: 10px;
     }
 
+
+}
+@media (max-width: 1180px) {
     .section-blog{
         height: auto;
-        margin-bottom: 40px;
+        padding-bottom: 40px;
     }
     .section-blog-conteiner-cards{
         display: flex;
@@ -411,9 +487,23 @@
         margin-bottom: 100px;
     }
 
+
+
+}
+
+@media (max-width: 890px) {
     .footer-conteiner{
         height: auto;
         position: absolute;
+        width: 100%;
+        margin: 0px;
+        display: flex;
+        flex-direction: column;
+    }
+    .footer-item-1{
+        height: auto;
+        width: 100%;
+
     }
 
     .footer-item-2{
@@ -422,7 +512,9 @@
         flex-direction: column;
         justify-items: center;
         align-items: center;
+        width: 100%;
         height: auto;
+        left: 0px;
         position: relative;
     
     }
@@ -434,7 +526,7 @@
         margin: 10px;
         height: auto;
     }
-
+    
     .footer-item-3{
         height: auto;
         display: flex;
@@ -458,6 +550,51 @@
         height: auto;
         padding-bottom: 30px;
     }
-    
+    .footer-item-3-author-p{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+    }
 
+}
+
+@media (max-width: 522px) {
+
+    .section-exotic-places{
+        display: flexbox;
+        justify-content: center;
+        height: auto;
+    }
+
+    .section-exotic-places-conteiner-cards{
+        display: flex;
+        flex-wrap: wrap;
+        margin-top: 30px;
+        margin-left: 90px;
+        padding: 0;
+        
+    }
+    .section-exotic-places-card{
+        margin: 0;
+        padding: 20px;
+        height: auto;
+    }
+
+    .section-50-desc{
+        padding-top: 30px;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column-reverse;
+        height: auto;
+        width: 100%;
+    }
+    .section-50-desc img{
+        height: 300px;
+        width: 100%;
+    }
+    .section-50-desc-detall{
+        width: 100%;
+        padding: 10px;
+    }
 }
