@@ -1,0 +1,188 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --fondo: #f2f2f2;
+  --ltrMenu: #030303;
+  --naranjaM: #c9a662;
+  --naranjaO: #583101;
+  --menu : linear-gradient(120deg, #f6d365 0%, #fda085 100%);
+}
+
+body {
+ 
+  background: var(--fondo);
+}
+
+header {
+
+  width: 100%;
+  height: 500px;
+  background-image: linear-gradient(
+      120deg,
+      rgba(246, 211, 101, 0.5) 0%,
+      rgba(253, 160, 133, 0.7) 100%
+    ),
+    url(/img/header.jpg);
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+ 
+}
+.menuM{
+  position: fixed;
+  top: 0;
+  align-items: center;
+  width: 100%;
+  background: transparent;
+}
+
+.cabecero{
+  
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.titulo{
+  margin-top: 100px;
+  font-size: 60px;
+  color: var(--fondo);
+  -webkit-text-stroke: 2px var(--naranjaO);
+}
+
+.textos{
+  margin-top:150px;
+}
+.nav{
+  display:flex;
+  width: 85%;
+  height: 80px;
+  margin: 0 auto;
+  justify-content: space-between;
+
+}
+
+.checkBtn {
+  display: none;
+}
+
+.nav .logo {
+  height: 70px;
+
+}
+.nav .logo img {
+  height: 100%;
+  vertical-align: top;
+}
+.nav ol {
+  list-style: none;
+}
+
+.nav ol a {
+  padding: 5px 0;
+  margin-right: 17px;
+  font-size: 17px;
+  font-weight: 300;
+  text-decoration: none;
+  border-bottom: 3px solid transparent;
+  color: var(--ltrMenu);
+  font-weight: bold;
+  
+}
+
+.nav ol a:hover {
+  border-bottom: 3px solid var(--naranjaO);
+  transition: 0.6s;
+}
+
+.textos input {
+    width:200px;
+    padding: 5px;
+    box-sizing: border-box;
+    border: 2px solid var(--naranjaM);
+    outline: none;
+}
+
+.textos input:focus{
+    border: 2px solid var(--naranjaO)
+}
+
+.textos .btn-menu{
+    border: none;
+    text-align: center;
+    text-decoration: none;
+    padding: 5px 30px;
+    cursor: pointer;
+    background-color: var(--naranjaM);
+    color: var(--ltrMenu);
+    font-weight: bold;
+}
+
+.btn-menu:active {
+    background-color: var(--naranjaO);
+    box-shadow: rgba(0, 0, 0, 0.5);
+    transform: translateX(4px);
+}
+
+.btn-menu:hover {
+  color: var(--ltrMenu);
+  font-weight: bold;  
+ background-color: var(--naranjaO);
+}
+
+@media (max-width:1000px) {
+    .menuM .checkBtn{
+        display:block; width:25px; height:25px; cursor:pointer;
+        position:relative; appearance: none;
+        -webkit-apperance: none;
+    }
+
+    .menuM .checkBtn::before{
+        content: '\f0c9';
+        font-family:'Font Awesome 5 Free'; 
+        font-weight:700; font-size:1.9em;
+        color: var(--naranjaO)
+    }
+    .checkBtn:checked:before{content:"\f08d";}
+    .nav ol{
+        position:absolute; width:100%; flex-direction:column;
+        background:var(--menu); top:80px; left:0; z-index:100; padding:1.2em;
+        clip-path:polygon(0 0,100% 0, 100% 0, 0 0); transition:clip-path .4s;
+    }
+    .checkBtn:checked ~ ol{clip-path:polygon(0 0,100% 0, 100% 100%, 0 100%);}
+    .nav ol::before{
+        content:''; position:absolute; bottom:0; left:0; width:100%; height:5px;
+        background:var(--menu);
+    }
+    .menuM{
+      position: fixed;
+      top: 0;
+      width: 100%;
+    }
+}
+
+@media (max-width:521px){
+    .textos{
+        display: flex;
+        flex-direction: column;
+    }
+    .checkBtn::before{
+        color: var(--ltrMenu) 
+    }
+   header {
+     height:200px;
+   }
+   
+   .titulo{
+     font-size: 30px;
+   }
+    
+
+}
+
+
